@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wezing-russia-test-system
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
